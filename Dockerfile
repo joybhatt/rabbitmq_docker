@@ -1,5 +1,5 @@
 FROM frodenas/ubuntu
-MAINTAINER Ferran Rodenas <frodenas@gmail.com>
+MAINTAINER Joy Bhattacharjee <joyahan01@gmail.com>
 
 # Install RabbitMQ 3.5
 RUN DEBIAN_FRONTEND=noninteractive && \
@@ -8,7 +8,7 @@ RUN DEBIAN_FRONTEND=noninteractive && \
     apt-key add rabbitmq-signing-key-public.asc && \
     echo "deb http://www.rabbitmq.com/debian/ testing main" | tee /etc/apt/sources.list.d/rabbitmq.list && \
     apt-get update && \
-    apt-get install -y --force-yes rabbitmq-server=3.5.6-1 && \
+    apt-get install -y --force-yes rabbitmq-server=3.6.1-1 && \
     rabbitmq-plugins enable rabbitmq_management && \
     service rabbitmq-server stop && \
     apt-get clean && \
