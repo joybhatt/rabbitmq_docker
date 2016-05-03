@@ -28,4 +28,4 @@ EXPOSE 5672
 EXPOSE 15672
 
 # Expose our log volumes
-VOLUME ["/var/log/rabbitmq"]
+VOLUME ["/data"]
