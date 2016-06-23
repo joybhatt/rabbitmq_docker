@@ -17,7 +17,7 @@ EOF
 echo "Creating user: \"$USER\"..."
 cat > /etc/rabbitmq/rabbitmq.config <<EOF
 [
-        {rabbit, [{default_user, <<"$USER">>},{default_pass, <<"$PASS">>},{default_vhost, <<"$VHOST">>},{tcp_listeners, [{"0.0.0.0", 5672}]},{vm_memory_high_watermark, {absolute, "196MiB"}}]}
+        {rabbit, [{default_user, <<"$USER">>},{default_pass, <<"$PASS">>},{default_vhost, <<"$VHOST">>},{tcp_listeners, [{"0.0.0.0", 5672}]},{vm_memory_high_watermark, {absolute, "196MiB"}},{log_levels, [{connection, info}, {channel, info}, {mirroring , info}]}]}
 ].
 EOF
 
