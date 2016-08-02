@@ -7,4 +7,4 @@ fi
 
 # Start RabbitMQ
 echo "Starting RabbitMQ..."
-/usr/sbin/rabbitmq-server
+exec chpst /usr/sbin/rabbitmq-server
