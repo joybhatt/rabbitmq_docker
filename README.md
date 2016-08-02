@@ -4,7 +4,7 @@ A Dockerfile that produces a Docker Image for [RabbitMQ](https://www.rabbitmq.co
 
 ## RabbitMQ version
 
-The `master` branch currently hosts RabbitMQ 3.5.
+The `master` branch currently hosts RabbitMQ 3.6.4.
 
 Different versions of RabbitMQ are located at the github repo [branches](https://github.com/frodenas/docker-rabbitmq/branches).
 
@@ -12,10 +12,10 @@ Different versions of RabbitMQ are located at the github repo [branches](https:/
 
 ### Build the image
 
-To create the image `frodenas/rabbitmq`, execute the following command on the `docker-rabbitmq` folder:
+To create the image `joyahan/rabbitmq`, execute the following command on the `docker-rabbitmq` folder:
 
 ```
-$ docker build -t frodenas/rabbitmq .
+$ docker build -t joyahan/rabbitmq .
 ```
 
 ### Run the image
@@ -23,13 +23,13 @@ $ docker build -t frodenas/rabbitmq .
 To run the image and bind to host port 5672:
 
 ```
-$ docker run -d --name rabbitmq -p 5672:5672 frodenas/rabbitmq
+$ docker run -d --name rabbitmq -p 5672:5672 joyahan/rabbitmq
 ```
 
 If you want also to expose the RabbitMQ Management interface, you will need also to expose port 15672:
 
 ```
-$ docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 frodenas/rabbitmq
+$ docker run -d --name rabbitmq -p 5672:5672 -p 15672:15672 joyahan/rabbitmq
 ```
 
 The first time you run your container, a new user `rabbitmq` with all privileges will be created with a random password.
