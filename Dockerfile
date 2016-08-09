@@ -1,7 +1,7 @@
 FROM frodenas/ubuntu
 MAINTAINER Joy Bhattacharjee <joyahan01@gmail.com>
 
-# Install RabbitMQ 3.6.2-1
+# Install RabbitMQ 3.6.4-1
 RUN DEBIAN_FRONTEND=noninteractive && \
     cd /tmp && \
     wget http://www.rabbitmq.com/rabbitmq-signing-key-public.asc && \
