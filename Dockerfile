@@ -25,8 +25,18 @@ ENTRYPOINT ["/scripts/run.sh"]
 CMD [""]
 
 # Expose listen port
+# AMQP
 EXPOSE 5672
+#Management API
 EXPOSE 15672
+#MQTT
+EXPOSE 1883
+#STOMP
+EXPOSE 61613
+#web socket stomp
+EXPOSE 15674
+# web socket mqtt
+EXPOSE 15675
 
 # Expose our log volumes
 VOLUME ["/data"]
