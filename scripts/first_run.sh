@@ -21,6 +21,8 @@ cat > /etc/rabbitmq/rabbitmq.config <<EOF
 ].
 EOF
 
+/scripts/apply_config.sh
+
 echo "========================================================================"
 echo "RabbitMQ User: \"$USER\""
 echo "RabbitMQ Password: \"$PASS\""
